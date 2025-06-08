@@ -20,3 +20,8 @@ ld -m elf_i386 read-record.o count-chars.o write-newline.o read-records.o -o rea
 as --32 add-year.s -o add-year.o
 ld -m elf_i386 add-year.o read-record.o write-record.o -o add-year
 ./add-year
+
+
+### run write-records-loop
+as --32 write-records-loop.s -o write-records-loop.o
+ld -m elf_i386 write-record.o write-records-loop.o -o write-records-loop

@@ -69,6 +69,8 @@ record3:
 file_name:
 .ascii "test.dat\0"
 .equ ST_FILE_DESCRIPTOR, -4
+
+.section .text
 .globl _start
 _start:
 #Copy the stack pointer to %ebp

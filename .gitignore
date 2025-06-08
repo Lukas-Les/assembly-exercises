@@ -1,5 +1,13 @@
+# Ignore build artifact directories
 executables/
 object_files/
+
+# Ignore all files
 *
+
+# BUT, do NOT ignore directories
+!*/
+
+# AND do NOT ignore these specific file types
 !*.s
 !*.md
