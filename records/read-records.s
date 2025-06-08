@@ -47,13 +47,13 @@ cmpl $RECORD_SIZE, %eax
 jne finished_reading
 #Otherwise, print out the first name
 #but first, we must know it’s size
-pushl $RECORD_FIRSTNAME + record_buffer
+pushl $RECORD_SEX + record_buffer
 call count_chars
 addl $4, %esp
 movl %eax, %edx
 movl ST_OUTPUT_DESCRIPTOR(%ebp), %ebx
 movl $SYS_WRITE, %eax
-movl $RECORD_FIRSTNAME + record_buffer, %ecx
+movl $RECORD_SEX + record_buffer, %ecx
 int $LINUX_SYSCALL
 pushl ST_OUTPUT_DESCRIPTOR(%ebp)
 call write_newline

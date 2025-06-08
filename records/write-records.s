@@ -24,6 +24,10 @@ record1:
 .byte 0
 .endr
 .long 45
+.ascii "m\0"
+.rept 2
+.byte 0
+.endr
 record2:
 .ascii "Marilyn\0"
 .rept 32 #Padding to 40 bytes
@@ -38,6 +42,10 @@ record2:
 .byte 0
 .endr
 .long 29
+.ascii "f\0"
+.rept 2
+.byte 0
+.endr
 record3:
 .ascii "Derrick\0"
 .rept 32 #Padding to 40 bytes
@@ -52,6 +60,11 @@ record3:
 .byte 0
 .endr
 .long 36
+.ascii "m\0"
+.rept 2
+.byte 0
+.endr
+
 #This is the name of the file we will write to
 file_name:
 .ascii "test.dat\0"
