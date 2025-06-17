@@ -25,3 +25,11 @@ ld -m elf_i386 add-year.o read-record.o write-record.o -o add-year
 ### run write-records-loop
 as --32 write-records-loop.s -o write-records-loop.o
 ld -m elf_i386 write-record.o write-records-loop.o -o write-records-loop
+
+
+### run find-oldest
+as --32 read-record.s -o read-record.o
+as --32 write-newline.s -o write-newline.o
+as --32 find-oldest.s -o find-oldest.o
+ld -m elf_i386 read-record.o write-newline.o find-oldest.o -o find-oldest 
+./find-oldest 

@@ -23,7 +23,7 @@ record1:
 .rept 209 #Padding to 240 bytes
 .byte 0
 .endr
-.long 45
+.long 18
 .ascii "m\0"
 .rept 2
 .byte 0
@@ -41,7 +41,7 @@ record2:
 .rept 203 #Padding to 240 bytes
 .byte 0
 .endr
-.long 29
+.long 56
 .ascii "f\0"
 .rept 2
 .byte 0
@@ -59,7 +59,7 @@ record3:
 .rept 206 #Padding to 240 bytes
 .byte 0
 .endr
-.long 36
+.long 39
 .ascii "m\0"
 .rept 2
 .byte 0
@@ -67,7 +67,7 @@ record3:
 
 #This is the name of the file we will write to
 file_name:
-.ascii "test.dat\0"
+.ascii "records.dat\0"
 .equ ST_FILE_DESCRIPTOR, -4
 
 .section .text
